@@ -175,10 +175,13 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+vim.keymap.set('n', '<C-up>', '<Esc>:m -2<CR>')
+vim.keymap.set('n', '<C-down>', '<Esc>:m +1<CR>')
+
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
--- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 -- vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+-- vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
 -- vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Keybinds to make split navigation easier.
@@ -594,8 +597,8 @@ require('lazy').setup({
         },
       }
 
-      -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
+      -- Ensure the servers and tools above are installed
       --  other tools, you can run
       --    :Mason
       --
