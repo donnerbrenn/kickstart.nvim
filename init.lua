@@ -171,8 +171,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
 -- NOTE: Custom Keyboard shortcuts
-vim.keymap.set('n', '<C-up>', '<Esc>:m -2<CR>', { desc = 'Move line up' })
-vim.keymap.set('n', '<C-down>', '<Esc>:m +1<CR>', { desc = 'Move line down' })
+vim.keymap.set('n', '<C-up>', '<cmd>m -2<CR>', { desc = 'Move line up' })
+vim.keymap.set('n', '<C-down>', '<cmd>m +1<CR>', { desc = 'Move line down' })
 --
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
@@ -241,7 +241,6 @@ require('lazy').setup({
   --    require('Comment').setup({})
 
   -- "gc" to comment visual regions/lines
-  --{ 'nvim-tree.lua', opts = {} }, --MANU ADDED
   { 'numToStr/Comment.nvim', opts = {} },
 
   -- Here is a more advanced example where we pass configuration
