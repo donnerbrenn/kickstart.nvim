@@ -8,7 +8,7 @@
 ========         |.-""""""""""""""""""-.|   |-----|          ========
 ========         ||                    ||   | === |          ========
 ========         ||   KICKSTART.NVIM   ||   |-----|          ========
-========         ||                    ||   | === |          ========
+==1=====         ||                    ||   | === |          ========
 ========         ||                    ||   |-----|          ========
 ========         ||:Tutor              ||   |:::::|          ========
 ========         |'-..................-'|   |____o|          ========
@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 -- [[ Setting options ]]
 -- See `:help vim.opt`
@@ -173,6 +173,8 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: Custom Keyboard shortcuts
 vim.keymap.set('n', '<C-up>', '<cmd>m -2<CR>', { desc = 'Move line up' })
 vim.keymap.set('n', '<C-down>', '<cmd>m +1<CR>', { desc = 'Move line down' })
+vim.keymap.set('n', '<leader>n', '<cmd>set nu!<CR>', { desc = 'Switch line numbers' })
+vim.keymap.set('n', '<leader>t', '<cmd>set rnu!<CR>', { desc = 'Switch relative line numbers' })
 --
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
@@ -610,7 +612,7 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
-        'stylua', -- Used to format Lua code
+        'stylua', -- Used to format Lua code /
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
@@ -784,6 +786,7 @@ require('lazy').setup({
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
     'folke/tokyonight.nvim',
+    'ellisonleao/gruvbox.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
