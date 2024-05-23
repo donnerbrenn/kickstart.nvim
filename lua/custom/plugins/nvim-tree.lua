@@ -16,7 +16,6 @@ return {
     vim.g.loaded_netrwPlugin = 1
     -- setup keymap
     local keymap = vim.keymap
-
     keymap.set('n', '<leader>ee', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle file explorer' })
     keymap.set('n', '<leader>ee', '<cmd>NvimTreeFindFileToggle<CR>', { desc = 'Toggle find file' })
     keymap.set('n', '<leader>ec', '<cmd>NvimTreeCollapse<CR>', { desc = 'Collapse file explorer' })

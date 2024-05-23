@@ -1,14 +1,14 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 local keymap = vim.keymap -- for conciseness()
+keymap.set('n', '<C-up>', '<cmd>m -2<CR>', { desc = 'Move line up' })
+keymap.set('n', '<C-down>', '<cmd>m +1<CR>', { desc = 'Move line down' })
 
 keymap.set('n', '<M-t>', 'diwatrue<ESC>', { desc = 'Remove word under the cursor and write "true"' })
 keymap.set('n', '<S-M-t>', 'diwaTrue<ESC>', { desc = 'Remove word under the cursor and write "True"' })
 keymap.set('n', '<M-f>', 'diwafalse<ESC>', { desc = 'Remove word under the cursor and write "false"' })
 keymap.set('n', '<S-M-f>', 'diwaFalse<ESC>', { desc = 'Remove word under the cursor and write "False"' })
 
-keymap.set('n', '<C-up>', '<cmd>m -2<CR>', { desc = 'Move line up' })
-keymap.set('n', '<C-down>', '<cmd>m +1<CR>', { desc = 'Move line down' })
 keymap.set('n', '<leader>n', '<cmd>set nu!<CR>', { desc = 'Switch line numbers' })
 keymap.set('n', '<leader>t', '<cmd>set rnu!<CR>', { desc = 'Switch relative line numbers' })
 keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
