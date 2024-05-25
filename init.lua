@@ -1,6 +1,6 @@
-require 'custom.core.keys'
-require 'custom.core.options'
-require 'custom.core.themes'
+require 'core.keys'
+require 'core.options'
+require 'core.themes'
 vim.g.have_nerd_font = true
 
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -17,6 +17,6 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system { 'git', 'clone', '--filter=blob:none', '--branch=stable', lazyrepo, lazypath }
 end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
-require('lazy').setup { 'tpope/vim-sleuth', { import = 'custom.plugins' } }
+require('lazy').setup { 'tpope/vim-sleuth', { import = 'plugins' } }
 
 -- vim: ts=2 sts=2 sw=2 et
