@@ -1,6 +1,8 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 local keymap = vim.keymap -- for conciseness()
+keymap.set('n', '<S-M-i>', 'gcc', { desc = '(un)comment line' })
+
 keymap.set('n', '<C-up>', '<cmd>m -2<CR>', { desc = 'Move line up' })
 keymap.set('n', '<C-down>', '<cmd>m +1<CR>', { desc = 'Move line down' })
 
@@ -17,10 +19,10 @@ keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnosti
 keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 --  See `:help wincmd` for a list of all window commands
-keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+keymap.set('n', '<C-h>', '<:wincmd h<CR>', { desc = 'Move focus to the left window' })
+keymap.set('n', '<C-l>', '<:wincmd h>', { desc = 'Move focus to the right window' })
+keymap.set('n', '<C-j>', '<:wincmd h>', { desc = 'Move focus to the lower window' })
+keymap.set('n', '<C-k>', '<:wincmd h>', { desc = 'Move focus to the upper window' })
 
 keymap.set('n', '<leader>sv', '<C-w>v')
 keymap.set('n', '<leader>sh', '<C-w>s')
