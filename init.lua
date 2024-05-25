@@ -1,6 +1,5 @@
 require 'core.keys'
 require 'core.options'
-require 'core.themes'
 vim.g.have_nerd_font = true
 
 vim.api.nvim_create_autocmd('TextYankPost', {
