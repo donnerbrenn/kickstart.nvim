@@ -5,6 +5,8 @@ keymap.set('n', '<S-M-i>', 'gcc', { desc = '(un)comment line' })
 
 keymap.set('n', '<C-up>', '<cmd>m -2<CR>', { desc = 'Move line up' })
 keymap.set('n', '<C-down>', '<cmd>m +1<CR>', { desc = 'Move line down' })
+keymap.set('n', '<C-d>', '<C-d>zz', { desc = 'Move down and center' })
+keymap.set('n', '<C-u>', '<C-u>zz', { desc = 'Move up and center' })
 
 keymap.set('n', '<M-t>', 'ciwtrue<ESC>', { desc = 'Remove word under the cursor and write "true"' })
 keymap.set('n', '<S-M-t>', 'ciwTrue<ESC>', { desc = 'Remove word under the cursor and write "True"' })
