@@ -1,6 +1,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 local keymap = vim.keymap -- for conciseness()
+
+keymap.set('n', '<F9>', '<cmd>:w<CR><cmd>!make clean gen/shaders.h<CR>', { desc = 'Build shaders' })
+
 keymap.set('n', '<S-M-i>', 'gcc', { desc = '(un)comment line' })
 keymap.set('n', '<C-right>', '<cmd>bprevious<CR>', { desc = 'Jump to previous buffer' })
 keymap.set('n', '<C-left>', '<cmd>bnext<CR>', { desc = 'Jump to next buffer' })
