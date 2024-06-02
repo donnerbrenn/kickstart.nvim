@@ -2,6 +2,8 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 local keymap = vim.keymap -- for conciseness()
 keymap.set('n', '<S-M-i>', 'gcc', { desc = '(un)comment line' })
+keymap.set('n', '<C-right>', '<cmd>bprevious<CR>', { desc = 'Jump to previous buffer' })
+keymap.set('n', '<C-left>', '<cmd>bnext<CR>', { desc = 'Jump to next buffer' })
 
 keymap.set('n', '<C-up>', '<cmd>m -2<CR>', { desc = 'Move line up' })
 keymap.set('n', '<C-down>', '<cmd>m +1<CR>', { desc = 'Move line down' })
