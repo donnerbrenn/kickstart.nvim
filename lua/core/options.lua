@@ -3,6 +3,8 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.cmd.colorscheme 'lunaperche'
+
 vim.opt.tabstop = 2
 vim.opt.expandtab = false
 

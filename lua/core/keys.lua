@@ -5,14 +5,15 @@ local keymap = vim.keymap -- for conciseness()
 keymap.set('n', '<F9>', '<cmd>:w<CR><cmd>!make clean gen/shaders.h<CR>', { desc = 'Build shaders' })
 
 -- Alpha
-keymap.set('n', '<leader>a', ':Alpha<CR>', { desc = 'Toggle Alpha' })
+keymap.set('n', '<leader>aa', ':Alpha<CR>', { desc = 'Toggle Alpha' })
 
 --Config
 keymap.set('n', '<leader>R', ':so %<CR>', { desc = 'Reload config' })
 
 --Sorting
-keymap.set('v', '<leader>s', ':sort<CR>', { desc = 'Sort lines' })
-keymap.set('v', '<leader>S', ':sort u<CR>', { desc = 'Sort lines and deduplicate' })
+keymap.set('v', '<leader>ss', ':sort<CR>', { desc = 'Sort lines' })
+keymap.set('v', '<leader>si', ':sort i<CR>', { desc = 'Sort lines, ignore case' })
+keymap.set('v', '<leader>su', ':sort u<CR>', { desc = 'Sort lines and deduplicate' })
 
 -- Buffers
 keymap.set('n', '<C-b>', '<cmd>bd<CR>', { desc = 'Close current buffer' })
@@ -43,11 +44,12 @@ keymap.set('n', '<M-f>', 'ciwfalse<ESC>', { desc = 'Remove word under the cursor
 keymap.set('n', '<S-M-f>', 'ciwFalse<ESC>', { desc = 'Remove word under the cursor and write "False"' })
 
 -- Lazy
-keymap.set('n', '<leader>ls', '<cmd>Lazy<CR>', { desc = 'Go to Lazy' })
+keymap.set('n', '<leader>ll', '<cmd>Lazy<CR>', { desc = 'Go to Lazy' })
 keymap.set('n', '<leader>lu', '<cmd>Lazy update<CR>', { desc = 'Lazy update' })
 
 -- Mason
 keymap.set('n', '<leader>mu', '<cmd>MasonUpdate<CR>', { desc = 'Mason update' })
+keymap.set('n', '<leader>mm', '<cmd>Mason<CR>', { desc = 'Mason ' })
 
 -- Line numbers
 keymap.set('n', '<leader>n', '<cmd>set nu!<CR>', { desc = 'Switch line numbers' })
