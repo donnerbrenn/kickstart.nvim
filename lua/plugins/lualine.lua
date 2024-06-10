@@ -4,7 +4,10 @@ return {
 	config = function()
 		require('lualine').setup {
 			options = {
-				theme = '16color',
+				theme = 'material',
+				section_separators = { left = '', right = '' },
+				component_separators = { left = '', right = '' },
+				icons_enabled = { 'branch', icon = '' },
 			},
 		}
 	end,
